@@ -1,0 +1,30 @@
+body{
+    background: url("/images/103.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.wrapper{
+    width: 700px;
+    margin:0 auto;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+}
+header{
+    height:200px;
+}
+
+
+header h1{
+    position: relative;
+    top:40%;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.cell{
+    /*background: red;*/
+    border-bottom:black solid 1px;
+    margin:10px;
+    padding-bottom: 10px;
+}

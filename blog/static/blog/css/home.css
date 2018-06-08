@@ -1,0 +1,117 @@
+/*!******************* H E A D E R ***********************!*/
+header #banner{
+    height: 800px;
+}
+
+header #inner{
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+
+header #inner h1{
+    font-size: 30px;
+    padding: 10px;
+}
+
+header #inner p{
+    margin: 50px auto;
+    padding:30px 0;
+    font-size:25px;
+    max-width:50%;
+    font-family:'Lobster', cursive;
+    font-weight: bolder;
+}
+
+header #inner #portrait{
+    height: 150px;
+    width:150px;
+    margin:0 auto;
+    overflow: hidden;
+    -webkit-border-radius:75px;
+    -moz-border-radius:75px;
+    border-radius: 75px;
+    position: relative;
+}
+
+header #inner  #portrait img{
+    height:100%;
+    position: absolute;
+    display: block;
+    top:50%;
+    left:50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+header #category{
+    text-align: center;
+    height: 80px;
+    position: relative;
+
+}
+
+header .icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    /*transform: rotate(45deg);*/
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+/******************* C O N T E N T ***********************/
+.content{
+}
+
+.article-preview{
+    width:60%;
+    margin: 30px auto;
+    overflow: hidden;
+    /*background: blue;*/
+    /*border:solid 1px white;*/
+
+}
+
+.article-preview .text-wrapper{
+    width:100%;
+    background: transparent;
+}
+
+.text-wrapper{
+    line-height: 30px;
+}
+
+
+.content .rest{
+    text-align: center;
+    padding: 20px;
+}
+
+.content .rest a{
+    line-height: 20px;
+    font-size: 20px;
+}
+
+
+
+
+/******************* F O O T E T ***********************/
+
+
+#footer{
+    height:50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#footer .copy {
+    text-align: center;
+    margin:0 auto;
+}
+
+#footer .copy p{
+    padding-top: 1em;
+    color:white;
+}

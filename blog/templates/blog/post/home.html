@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <link href="{% static "blog/css/home.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div id="banner">
+            <div id="inner">
+                <div id="portrait"><img src="{{ user.profile.portrait.url }}"></div>
+                <p class="subhead">{{ user.profile.intro }}</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        {% for blog in recent_blog %}
+            <section class="article-preview">
+            <a href="{{ blog.get_absolute_url }}">
+                <div class="text-section">
+                    <div class="text-wrapper">
+                        <p class="blog-title">{{ blog.title }}</p>
+                        <p class="blog-body">{{ blog.body|slice:"200" }}</p>
+                    </div>
+                </div>
+            </a>
+            </section>
+        {% endfor %}
+        <div class="rest">
+            <a href="{% url 'blog:recent_blog' author_name=user.username %}">查看全部</a>
+        </div>
+    </div>
+
+
+    <div id="footer"><!--脚部-->
+        <div class="copy">
+            <p>&copy {{ user.username }} 2017</p>
+        </div>
+    </div>
+
+{% endblock %}

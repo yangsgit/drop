@@ -1,0 +1,32 @@
+.article-preview{
+    width:60%;
+    margin: 30px auto;
+    overflow: hidden;
+
+}
+
+.article-preview .text-wrapper{
+    width:100%;
+    background: transparent;
+}
+
+.text-wrapper{
+    line-height: 30px;
+}
+
+.content .rest{
+    text-align: center;
+    padding: 20px;
+    border-bottom: white solid 1px;
+}
+
+.content .rest a{
+    line-height: 20px;
+    font-size: 20px;
+    color: rgba(255,255,255,0.8);
+}
+
+.pagination{
+    width: 60%;
+    margin:30px auto;
+}

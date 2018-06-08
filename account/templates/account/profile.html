@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static "blog/css/profile.css" %}">
+
+</head>
+<body>
+    <form action="{% url 'account:profile'  username=user.username %}" method="post" enctype="multipart/form-data">
+        <div class="wrapper">
+            <h1>{{ user.username }}</h1>
+
+            <label for="intro">简介:<br>
+            <textarea id="intro" name="intro">{{ user.profile.intro }}</textarea><br><br>
+            </label>
+            <br/>
+
+            <label>
+                头像:
+                <input id="portrait" name="portrait" type="file"><br>
+                <div class="portraitDiv">
+                    <img id="portraitImg"  src="{{ user.profile.portrait.url }}" alt="头像">
+                </div>
+            </label>
+            {% csrf_token %}
+            <input id="sub" type="submit" value="提交">
+        </div>
+    </form>
+    <script type="text/javascript" src="{% static "account/js/jquery-3.2.1.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "account/js/profile.js" %}"></script>
+</body>
+</html>

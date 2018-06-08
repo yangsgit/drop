@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block head %}
+    <link rel="stylesheet" href="{% static "blog/css/allblog.css" %}">
+{% endblock %}
+{% block title %}{% endblock %}
+{% block content %}
+    {% for blog in recent_blog %}
+        <section class="article-preview">
+        <a href="{{ blog.get_absolute_url }}">
+            <div class="text-section">
+                <div class="text-wrapper">
+                    <p class="blog-title">{{ blog.title }}</p>
+                    <p class="blog-body">{{  blog.body|slice:"200" }}</p>
+                </div>
+            </div>
+        </a>
+        </section>
+    {% endfor %}
+    {% include "blog/pagination.html" with page=recent_blog %}
+{% endblock %}

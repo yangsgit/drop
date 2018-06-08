@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+    <h1>Register</h1>
+    <form action="{% url 'account:register' %}" method="post">
+        <label>用户名:<br>
+        <input type="text" name="username"><br>
+        </label>
+
+        <label>密码:<br>
+        <input type="password" name="password"><br>
+        </label>
+
+        <label>再次确认:<br>
+        <input type="password" name="affirm"><br>
+        </label>
+        <label>邮箱:<br>
+        <input type="text" name="email"><br>
+        </label>
+        {% csrf_token %}
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}

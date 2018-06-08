@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "blog/css/reset.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/base.css" %}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li id="home-page"> <a href="{% url 'blog:user_home' %}">{{ user.username }}</a> </li>
+            <li id="logout"><a href="{% url 'account:logout' %}">退出</a></li>
+            <li id="setting"><a href="{% url 'account:profile'  username=user.username %}">设置</a></li>
+            <li><a href="{% url 'blog:write_blog' author_name=user.username %}">写博客</a></li>
+        </ul>
+    </div>
+
+    <div id="content"><!--身体-->
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

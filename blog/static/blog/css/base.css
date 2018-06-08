@@ -1,0 +1,53 @@
+body{
+    background: url("../images/103.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+p,a{
+    color: black;
+}
+
+.blog-title{
+    font-size: 25px;
+    margin:0 0 10px 0;
+    font-weight: bold;
+}
+
+.blog-body{
+    line-height: 1.5em;
+    font-size: 17px;
+}
+
+
+#nav {
+    font-size: 20px;
+    font-weight:lighter;
+    height: 50px;
+    letter-spacing: 2px;
+}
+#nav ul{
+    list-style: none;
+}
+
+#nav a{
+    border-bottom:solid  1px;
+    /*border-radius: 5px;*/
+    padding-bottom: 5px;
+}
+
+#nav li{
+    float: right;
+    line-height: 50px;
+    margin-right:  40px;
+}
+
+
+
+#nav #home-page{
+    float: left;
+    margin-left: 40px;
+}
+
+
